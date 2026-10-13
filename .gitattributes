@@ -1,0 +1,16 @@
+# 统一换行符，避免 Windows/Linux 提交时产生 CRLF 噪声与整文件 diff
+* text=auto eol=lf
+
+# 明确二进制类型，禁止 Git 做换行转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.pdf  binary
+*.xlsx binary
+*.zip  binary
+
+# 这些文件在 GitHub 上按语言统计时不计入
+*.md   linguist-documentation
+docs/* linguist-documentation

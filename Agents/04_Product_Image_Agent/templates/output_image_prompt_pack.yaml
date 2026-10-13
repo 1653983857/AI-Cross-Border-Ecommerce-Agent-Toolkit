@@ -1,0 +1,234 @@
+# 输出模板 · 图片 Prompt 包
+# 04 Product Image Agent 的标准输出结构
+# 可直接被出图脚本读取（YAML 格式，字段名固定）
+
+meta:
+  product_name: ""
+  platform: ""                 # shopee | mercadolivre | amazon | tiktokshop | shopify
+  target_market: ""
+  mode: ""                     # standard | variant | iterate
+  generated_at: ""             # YYYY-MM-DD
+  prompt_version: "04-Product-Image v0.1"
+  upstream: "03-Listing-Creative"   # 上游模块，必须为 03
+
+# ─────────────────────────────────────────────
+# 1. 9 图内容规划
+# ─────────────────────────────────────────────
+image_plan:
+  - slot: 1
+    role: "主图"
+    message: ""                # 这张图承载的唯一信息
+    info_type: "识别"           # 识别 | 说服 | 信息 | 代入 | 消除疑虑 | 信任
+    composition: ""            # 画面构成描述
+    copy: null                 # 文案，无文字则 null
+    copy_chars: 0
+
+  - slot: 2
+    role: "核心卖点图"
+    message: ""                # = core_selling_point
+    info_type: "说服"
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 3
+    role: "参数规格图"
+    message: ""
+    info_type: "信息"
+    type: "layout"             # ← layout = 设计排版图，非 AI 出图
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 4
+    role: "使用场景图 A"
+    message: ""                # = usage_scope_confirmed[0]
+    info_type: "代入"
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 5
+    role: "使用场景图 B"
+    message: ""                # = usage_scope_confirmed[1]
+    info_type: "代入"
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 6
+    role: "细节特写图"
+    message: ""
+    info_type: "说服"
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 7
+    role: "尺寸/对比图"
+    message: ""
+    info_type: "消除疑虑"
+    type: "layout"             # 含参照物，通常实拍 + 标注
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 8
+    role: "包装清单图"
+    message: ""
+    info_type: "消除纠纷"
+    type: "photo_required"     # ← 必须实拍，禁止 AI 生成
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+  - slot: 9
+    role: "售后/保修图"
+    message: ""
+    info_type: "信任"
+    type: "layout"
+    composition: ""
+    copy: ""
+    copy_chars: 0
+
+# ─────────────────────────────────────────────
+# 2. 平台差异方案（ML / Amazon 必有）
+# ─────────────────────────────────────────────
+platform_variant:
+  conflict: false              # 是否存在平台冲突
+  variants:
+    - name: "A"
+      platforms: ["mercadolivre", "amazon"]
+      main_image_rule: "纯白底，无任何文字 / 水印 / 边框 / 道具"
+    - name: "B"
+      platforms: ["shopee", "tiktokshop"]
+      main_image_rule: "白底 + 卖点文字（≤2 行，每行 ≤20 字符）"
+  note: "同一套主图素材不能跨平台复用"
+
+# ─────────────────────────────────────────────
+# 3. 出图 Prompt
+# ─────────────────────────────────────────────
+prompts:
+  - slot: 1
+    role: "主图"
+    prompt: ""                 # 含七槽位：SUBJECT / MATERIAL / COMPOSITION / LIGHTING / BACKGROUND / STYLE / PARAMETERS
+    negative_prompt: ""
+    aspect_ratio: "1:1"
+    recommended_size: "1024x1024"
+    reference_image_needed: true
+
+  - slot: 2
+    role: "核心卖点图"
+    prompt: ""
+    negative_prompt: ""
+    aspect_ratio: "1:1"
+    recommended_size: "1024x1024"
+    reference_image_needed: true
+
+  # slot 3 为 layout，无出图 Prompt，改用 layout_spec
+  - slot: 3
+    role: "参数规格图"
+    type: "layout"
+    layout_spec:
+      size: "1024x1024"
+      background: "#FFFFFF"
+      title: ""
+      rows: []                 # 参数行，如 ["Capacidade: 20000 mAh", ...]
+      font_hint: "无衬线，主文案高度 ≥ 图高 4%"
+      color_palette: []
+
+  - slot: 4
+    role: "使用场景图 A"
+    prompt: ""
+    negative_prompt: ""
+    aspect_ratio: "1:1"
+    recommended_size: "1024x1024"
+    portrait_constraint: "不露可识别面孔（手部 / 背影 / 远景）"
+
+  - slot: 5
+    role: "使用场景图 B"
+    prompt: ""
+    negative_prompt: ""
+    aspect_ratio: "1:1"
+    recommended_size: "1024x1024"
+    portrait_constraint: "不露可识别面孔"
+
+  - slot: 6
+    role: "细节特写图"
+    prompt: ""
+    negative_prompt: ""
+    aspect_ratio: "1:1"
+    recommended_size: "1024x1024"
+
+  - slot: 7
+    role: "尺寸/对比图"
+    type: "layout"
+    layout_spec:
+      size: "1024x1024"
+      reference_object: ""     # 参照物，如 "mão humana adulta"
+      dimensions_label: ""     # 来自 spec_table，逐字符一致
+      comparison_rule: "对比对象必须为通用形态，不得特指竞品外观"
+
+  - slot: 8
+    role: "包装清单图"
+    type: "photo_required"     # ⚠️ 必须实拍
+    note: "AI 生成会导致买家收到实物不符 → 配件缺失差评"
+    shoot_spec:
+      layout: "平铺俯拍"
+      items: []                # = package_content，一件不落
+      must_show_exclusion: true  # 必须标注"不含什么"
+
+  - slot: 9
+    role: "售后/保修图"
+    type: "layout"
+    layout_spec:
+      size: "1024x1024"
+      content: []              # 保修时长 / 范围 / 客服通道
+      forbidden: "不得生成仿平台官方标识的图形"
+
+# ─────────────────────────────────────────────
+# 4. 图内文案（后期叠字用，不进出图 Prompt）
+# ─────────────────────────────────────────────
+overlay_copy:
+  - slot: 1
+    main_copy: ""
+    sub_copy: ""
+    chars: 0
+    chars_limit: 20
+    position: "居中偏上"
+    font_size_hint: "主文案高度 ≥ 图高 4%"
+  # ... 逐图
+overlay_note: "图内文字由设计工具后期叠字，不用图像模型渲染（葡语变音符号极易出错）"
+
+# ─────────────────────────────────────────────
+# 5. 图片合规扫描
+# ─────────────────────────────────────────────
+compliance_scan:
+  I1_fake_certification: {hits: 0, actions: []}
+  I2_fake_social_proof: {hits: 0, actions: []}
+  I3_unauthorized_brand: {hits: 0, actions: []}
+  I4_param_mismatch: {hits: 0, actions: []}
+  I5_scene_out_of_scope: {hits: 0, actions: []}
+  I6_real_person_portrait: {hits: 0, actions: []}
+  I7_absolute_terms: {hits: 0, actions: []}
+  I8_comparison_genericized: {hits: 0, actions: []}
+  conclusion: ""               # 全部为 0 时写 "图片合规扫描：无命中"
+
+# ─────────────────────────────────────────────
+# 6. 交付给 05 Product Video Agent
+# ─────────────────────────────────────────────
+handoff_to_video:
+  visual_tone_confirmed: ""
+  hero_visual: ""              # 主图画面描述 → 视频首帧参考
+  key_visual_moments: []       # 2–3 个最有冲击力的画面 → 视频分镜优先项
+  forbidden_words: []          # 透传，供 05 做字幕拦截
+
+# ─────────────────────────────────────────────
+# 7. 发布前提醒
+# ─────────────────────────────────────────────
+pre_publish:
+  - "已复核目标平台当前图片规范（规则会变）"
+  - "图 8 已实拍，包装清单与实际一致"
+  - "图内文案已人工校对变音符号"
+  - "主图已按平台分别制作（ML 无文字 / Shopee 带卖点）"
+  - "已记录本次 Prompt 版本号"

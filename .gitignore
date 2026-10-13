@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────────────────────
+# 注意：Git 的 .gitignore **不支持行内注释**。
+# `!pattern  # 说明` 会被当成 pattern 的一部分，导致规则失效。
+# 注释必须独占一行 —— 这个坑真踩过。
+# ─────────────────────────────────────────────────────────────
+
+# ---- 凭据 / 隐私（严禁提交）----
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+credentials/
+*账号*.txt
+*密码*.txt
+
+# ---- 未脱敏的业务数据 ----
+stores/
+raw_data/
+uploads/
+
+# 默认忽略所有 CSV（真实类目导出属于业务数据）
+*.csv
+
+# 但模板与样本需入库
+!templates/*.csv
+!Agents/**/templates/*.csv
+
+# 样本数据需入库（用于验证环境、复现案例、核对预期结果）
+!Agents/**/samples/*.csv
+
+# ---- 生成物 ----
+output/
+dist/
+*.log
+
+# 但 samples/ 下的产出是"预期结果"，同样需要入库
+!Agents/**/samples/*.json
+!Agents/**/samples/*.md
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

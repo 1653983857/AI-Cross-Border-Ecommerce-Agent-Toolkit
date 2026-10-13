@@ -1,0 +1,473 @@
+{
+  "meta": {
+    "source_file": "sample_patinete_eletrico.csv",
+    "row_count_raw": 50,
+    "row_count_kept": 50,
+    "column_map": {
+      "title": "商品名称",
+      "price": "价格",
+      "monthly_sales": "月销量",
+      "monthly_revenue": "月销售额",
+      "seller": "卖家",
+      "brand": "品牌",
+      "rating": "评分",
+      "review_count": "评价数",
+      "listing_age_days": "上架时间",
+      "url": "商品链接"
+    }
+  },
+  "market_capacity": {
+    "item_count": 50,
+    "total_monthly_sales": 5886.0,
+    "total_monthly_revenue": 12700584.22,
+    "avg_price": 2238.56,
+    "median_price": 2252.03,
+    "price_min": 1500.59,
+    "price_max": 3129.06,
+    "avg_monthly_sales_per_item": 117.7,
+    "implied_avg_price": 2157.76,
+    "rev_share_top10": 0.7154
+  },
+  "brand_concentration": {
+    "subject_count": 6,
+    "cr10": 1.0,
+    "cr10_by_sales": 1.0,
+    "cr3": 0.7409,
+    "hhi": 2219.7,
+    "cr_note": "主体数（6）≤ n（10），CR10 恒为 100%，无参考意义。请改用 CR3（74.1%）与 HHI（2219.7）判断集中度。",
+    "top_list": [
+      {
+        "rank": 1,
+        "name": "Generic",
+        "revenue": 3800602.19,
+        "revenue_share": 0.2992,
+        "sales": 1793,
+        "sales_share": 0.3046,
+        "item_count": 12,
+        "item_share": 0.24
+      },
+      {
+        "rank": 2,
+        "name": "Sem marca",
+        "revenue": 3639985.53,
+        "revenue_share": 0.2866,
+        "sales": 1613,
+        "sales_share": 0.274,
+        "item_count": 15,
+        "item_share": 0.3
+      },
+      {
+        "rank": 3,
+        "name": "Outras",
+        "revenue": 1969251.04,
+        "revenue_share": 0.1551,
+        "sales": 899,
+        "sales_share": 0.1527,
+        "item_count": 10,
+        "item_share": 0.2
+      },
+      {
+        "rank": 4,
+        "name": "MarcaA",
+        "revenue": 1586133.21,
+        "revenue_share": 0.1249,
+        "sales": 792,
+        "sales_share": 0.1346,
+        "item_count": 6,
+        "item_share": 0.12
+      },
+      {
+        "rank": 5,
+        "name": "MarcaB",
+        "revenue": 1215716.22,
+        "revenue_share": 0.0957,
+        "sales": 502,
+        "sales_share": 0.0853,
+        "item_count": 4,
+        "item_share": 0.08
+      },
+      {
+        "rank": 6,
+        "name": "MarcaC",
+        "revenue": 488896.03,
+        "revenue_share": 0.0385,
+        "sales": 287,
+        "sales_share": 0.0488,
+        "item_count": 3,
+        "item_share": 0.06
+      }
+    ]
+  },
+  "seller_concentration": {
+    "subject_count": 34,
+    "cr10": 0.7154,
+    "cr10_by_sales": 0.7056,
+    "cr3": 0.4675,
+    "hhi": 951.5,
+    "cr_note": null,
+    "top_list": [
+      {
+        "rank": 1,
+        "name": "LojaGrande1",
+        "revenue": 2705743.64,
+        "revenue_share": 0.213,
+        "sales": 1261,
+        "sales_share": 0.2142,
+        "item_count": 8,
+        "item_share": 0.16
+      },
+      {
+        "rank": 2,
+        "name": "LojaGrande3",
+        "revenue": 2152855.56,
+        "revenue_share": 0.1695,
+        "sales": 949,
+        "sales_share": 0.1612,
+        "item_count": 5,
+        "item_share": 0.1
+      },
+      {
+        "rank": 3,
+        "name": "LojaGrande2",
+        "revenue": 1079065.13,
+        "revenue_share": 0.085,
+        "sales": 569,
+        "sales_share": 0.0967,
+        "item_count": 6,
+        "item_share": 0.12
+      },
+      {
+        "rank": 4,
+        "name": "LojaPequena15",
+        "revenue": 668412.97,
+        "revenue_share": 0.0526,
+        "sales": 323,
+        "sales_share": 0.0549,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 5,
+        "name": "LojaPequena07",
+        "revenue": 667685.47,
+        "revenue_share": 0.0526,
+        "sales": 293,
+        "sales_share": 0.0498,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 6,
+        "name": "LojaPequena17",
+        "revenue": 434823.28,
+        "revenue_share": 0.0342,
+        "sales": 184,
+        "sales_share": 0.0313,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 7,
+        "name": "LojaPequena28",
+        "revenue": 364390.8,
+        "revenue_share": 0.0287,
+        "sales": 145,
+        "sales_share": 0.0246,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 8,
+        "name": "LojaPequena18",
+        "revenue": 361731.5,
+        "revenue_share": 0.0285,
+        "sales": 145,
+        "sales_share": 0.0246,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 9,
+        "name": "LojaPequena29",
+        "revenue": 329258.24,
+        "revenue_share": 0.0259,
+        "sales": 128,
+        "sales_share": 0.0217,
+        "item_count": 1,
+        "item_share": 0.02
+      },
+      {
+        "rank": 10,
+        "name": "LojaPequena26",
+        "revenue": 321929.4,
+        "revenue_share": 0.0253,
+        "sales": 156,
+        "sales_share": 0.0265,
+        "item_count": 1,
+        "item_share": 0.02
+      }
+    ]
+  },
+  "price_bands": {
+    "price_range": [
+      1500.59,
+      3129.06
+    ],
+    "bin_width": 162.85,
+    "bins": [
+      {
+        "index": 1,
+        "price_lo": 1500.59,
+        "price_hi": 1663.44,
+        "item_count": 7,
+        "total_sales": 499,
+        "total_revenue": 795781.82,
+        "avg_sales_per_item": 71.3
+      },
+      {
+        "index": 2,
+        "price_lo": 1663.44,
+        "price_hi": 1826.28,
+        "item_count": 7,
+        "total_sales": 799,
+        "total_revenue": 1409872.23,
+        "avg_sales_per_item": 114.1
+      },
+      {
+        "index": 3,
+        "price_lo": 1826.28,
+        "price_hi": 1989.13,
+        "item_count": 4,
+        "total_sales": 618,
+        "total_revenue": 1214826.45,
+        "avg_sales_per_item": 154.5
+      },
+      {
+        "index": 4,
+        "price_lo": 1989.13,
+        "price_hi": 2151.98,
+        "item_count": 5,
+        "total_sales": 1120,
+        "total_revenue": 2347217.48,
+        "avg_sales_per_item": 224.0
+      },
+      {
+        "index": 5,
+        "price_lo": 2151.98,
+        "price_hi": 2314.83,
+        "item_count": 5,
+        "total_sales": 999,
+        "total_revenue": 2256349.47,
+        "avg_sales_per_item": 199.8
+      },
+      {
+        "index": 6,
+        "price_lo": 2314.82,
+        "price_hi": 2477.67,
+        "item_count": 5,
+        "total_sales": 875,
+        "total_revenue": 2070575.57,
+        "avg_sales_per_item": 175.0
+      },
+      {
+        "index": 7,
+        "price_lo": 2477.67,
+        "price_hi": 2640.52,
+        "item_count": 5,
+        "total_sales": 552,
+        "total_revenue": 1404915.6,
+        "avg_sales_per_item": 110.4
+      },
+      {
+        "index": 8,
+        "price_lo": 2640.52,
+        "price_hi": 2803.37,
+        "item_count": 5,
+        "total_sales": 241,
+        "total_revenue": 655057.19,
+        "avg_sales_per_item": 48.2
+      },
+      {
+        "index": 9,
+        "price_lo": 2803.37,
+        "price_hi": 2966.21,
+        "item_count": 2,
+        "total_sales": 56,
+        "total_revenue": 158402.98,
+        "avg_sales_per_item": 28.0
+      },
+      {
+        "index": 10,
+        "price_lo": 2966.21,
+        "price_hi": 3129.06,
+        "item_count": 5,
+        "total_sales": 127,
+        "total_revenue": 387585.43,
+        "avg_sales_per_item": 25.4
+      }
+    ],
+    "valleys": [
+      {
+        "bin_index": 3,
+        "price": 1989.13,
+        "drop": 0.2265
+      },
+      {
+        "bin_index": 9,
+        "price": 2966.21,
+        "drop": 0.5591
+      }
+    ],
+    "noise_valleys": 0,
+    "trimmed_valleys": [],
+    "valley_min_drop": 0.15,
+    "suggested_bands": [
+      {
+        "band_index": 1,
+        "price_from": 1500.59,
+        "price_to": 1989.13,
+        "item_count": 18,
+        "total_sales": 1916,
+        "total_revenue": 3420480.5,
+        "avg_sales_per_item": 106.4
+      },
+      {
+        "band_index": 2,
+        "price_from": 1989.13,
+        "price_to": 2966.21,
+        "item_count": 27,
+        "total_sales": 3843,
+        "total_revenue": 8892518.29,
+        "avg_sales_per_item": 142.3
+      },
+      {
+        "band_index": 3,
+        "price_from": 2966.21,
+        "price_to": 3129.06,
+        "item_count": 5,
+        "total_sales": 127,
+        "total_revenue": 387585.43,
+        "avg_sales_per_item": 25.4
+      }
+    ],
+    "max_bands": 5
+  },
+  "config_matrix": {
+    "功率": {
+      "value_count": 3,
+      "unparsed_items": 0,
+      "avg_sales_all_values": 117.7,
+      "equal_share_reference": 0.3333,
+      "rows": [
+        {
+          "value": "500W",
+          "item_count": 19,
+          "item_share": 0.38,
+          "total_sales": 3612,
+          "sales_share": 0.6137,
+          "avg_sales": 190.1,
+          "judgement": [
+            "总销量高→需求大",
+            "单品效率高"
+          ]
+        },
+        {
+          "value": "350W",
+          "item_count": 14,
+          "item_share": 0.28,
+          "total_sales": 1298,
+          "sales_share": 0.2205,
+          "avg_sales": 92.7,
+          "judgement": [
+            "常规"
+          ]
+        },
+        {
+          "value": "800W",
+          "item_count": 17,
+          "item_share": 0.34,
+          "total_sales": 976,
+          "sales_share": 0.1658,
+          "avg_sales": 57.4,
+          "judgement": [
+            "常规"
+          ]
+        }
+      ]
+    },
+    "承重": {
+      "value_count": 3,
+      "unparsed_items": 0,
+      "avg_sales_all_values": 117.7,
+      "equal_share_reference": 0.3333,
+      "rows": [
+        {
+          "value": "150kg",
+          "item_count": 32,
+          "item_share": 0.64,
+          "total_sales": 3740,
+          "sales_share": 0.6354,
+          "avg_sales": 116.9,
+          "judgement": [
+            "总销量高→需求大",
+            "主流配置→竞争激烈",
+            "市场大但竞争激烈"
+          ]
+        },
+        {
+          "value": "100kg",
+          "item_count": 14,
+          "item_share": 0.28,
+          "total_sales": 1298,
+          "sales_share": 0.2205,
+          "avg_sales": 92.7,
+          "judgement": [
+            "常规"
+          ]
+        },
+        {
+          "value": "200kg",
+          "item_count": 4,
+          "item_share": 0.08,
+          "total_sales": 848,
+          "sales_share": 0.1441,
+          "avg_sales": 212.0,
+          "judgement": [
+            "单品效率高",
+            "★机会配置（数量少但效率高）"
+          ]
+        }
+      ]
+    },
+    "容量": {
+      "value_count": 2,
+      "unparsed_items": 0,
+      "avg_sales_all_values": 117.7,
+      "equal_share_reference": 0.5,
+      "rows": [
+        {
+          "value": "12Ah",
+          "item_count": 36,
+          "item_share": 0.72,
+          "total_sales": 4588,
+          "sales_share": 0.7795,
+          "avg_sales": 127.4,
+          "judgement": [
+            "总销量高→需求大"
+          ]
+        },
+        {
+          "value": "10Ah",
+          "item_count": 14,
+          "item_share": 0.28,
+          "total_sales": 1298,
+          "sales_share": 0.2205,
+          "avg_sales": 92.7,
+          "judgement": [
+            "常规"
+          ]
+        }
+      ]
+    }
+  }
+}
