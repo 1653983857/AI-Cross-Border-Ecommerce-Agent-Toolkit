@@ -29,7 +29,7 @@
 
 本仓库的方法论拆解自一份 38 页的内部运营手册，原文已随仓库提供：
 
-📄 **[《Shopee 巴西站运营 SOP 总框架》（PDF · 38 页 · 2.1 MB）](./docs/电商运营SOP总框架.pdf)**
+📄 **[《Shopee 巴西站运营 SOP 总框架》（PDF · 38 页 · 29.7 MB）](./docs/电商运营SOP总框架.pdf)**
 
 SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to_Agent.md`](./docs/00_Architecture_SOP_to_Agent.md)。
 
