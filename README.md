@@ -25,6 +25,22 @@
 
 ---
 
+## 📎 原始资料来源
+
+本仓库的方法论拆解自一份 38 页的内部运营手册，原文已随仓库提供：
+
+📄 **[《Shopee 巴西站运营 SOP 总框架》（PDF · 38 页 · 2.1 MB）](./docs/电商运营SOP总框架.pdf)**
+
+SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to_Agent.md`](./docs/00_Architecture_SOP_to_Agent.md)。
+
+> ⚠️ **请注意**：这份 PDF 是**未经删改的原始内部手册**，其中包含平台明确禁止的做法（如刷单、诱导评价、虚假举报、参数虚标等）。
+>
+> **本仓库的 7 个 Agent 模块均未实现这些做法**：已识别项及其合规替代方案见 [`docs/03_Compliance_Guard.md`](./docs/03_Compliance_Guard.md)，未实现项逐条登记见 [`docs/05_SOP_Gap_Register.md`](./docs/05_SOP_Gap_Register.md)。
+>
+> 换句话说 —— **这份 PDF 是「原料」，不是「产品」。** 本仓库的产出物只包含合规路径。
+
+---
+
 ## 🗂 Agent 全景
 
 7 个模块，**全部已完成**。
@@ -108,7 +124,8 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │   ├── 02_Platform_Output_Spec.md        # 各平台字段/字数硬指标
 │   ├── 03_Compliance_Guard.md            # 合规红线 + 灰产动作的合规改写 ⭐
 │   ├── 04_Result_Checklist.md            # 交付自检清单
-│   └── 05_SOP_Gap_Register.md            # SOP 未实现项登记表（透明化）
+│   ├── 05_SOP_Gap_Register.md            # SOP 未实现项登记表（透明化）
+│   └── 电商运营SOP总框架.pdf              # 原始内部手册全文（38 页，未删改）
 │
 ├── Agents/                       # AI 智能体模块
 │   ├── README.md                 # 模块索引 + 交接契约
