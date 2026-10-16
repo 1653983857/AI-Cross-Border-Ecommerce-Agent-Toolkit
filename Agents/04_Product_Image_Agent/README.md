@@ -82,11 +82,41 @@ SOP 3.3 写了一句：
 
 ---
 
+## 四·五、Skill 形态（v0.4 新增）
+
+本模块已按社区标准 Skill 结构组织（对标 GitHub 头部电商生图 Skill），
+**可以被 Claude Code / Codex / Cursor / WorkBuddy 等任何读取 `SKILL.md` 的 Agent 直接安装调用**：
+
+```text
+04_Product_Image_Agent/
+├── SKILL.md                        # Agent 入口：意图识别 → 规则路由 → 出图 → 校验
+├── references/
+│   ├── platform-shopee.md          # Shopee 巴西规则卡（首图推荐叠字 / 2MB 上限 / 9 图）
+│   ├── platform-mercadolivre.md    # ML 规则卡（2026 新规：背景按类目 / 占比 95% / 首图禁促销文字）
+│   ├── platform-amazon.md          # Amazon 对照卡（最严白底标准）
+│   └── scenarios-9grid.md          # 9 图场景库（每图位：目的/构图/prompt 骨架/平台差异）
+├── scripts/
+│   └── check_main_image.py         # 像素级合规校验 + --fix 自动修复（纯 Pillow）
+├── prompts/ templates/ examples/   # 原有四件套
+```
+
+**用法**：
+
+```bash
+# 出图后必跑的合规校验（像素级，非"看一眼"）
+python scripts/check_main_image.py 出图.png --platform mercadolivre
+python scripts/check_main_image.py 出图.png --platform shopee --fix 修复后.png
+```
+
+校验不过的图**不许交付**；`--fix` 能自动修的（白底不纯、留白过多、非正方形）会直接修好并复检。
+
+---
+
 ## 五、9 图框架
 
 | # | 图位 | 职责 | 信息来源 | 平台差异 |
 |---|---|---|---|---|
-| 1 | **主图** | 一眼说清"这是什么" | `product_name` + 白底 | ⚠️ ML 禁文字；Shopee 可加卖点 |
+| 1 | **主图** | 一眼说清"这是什么" | `product_name` + 平台规则卡 | ⚠️ ML 首图禁促销文字；Shopee 推荐叠字 |
 | 2 | **核心卖点图** | 一句话主卖点视觉化 | `core_selling_point` | 通用 |
 | 3 | **参数规格图** | 把 `spec_table` 可视化 | `spec_table` | 通用 |
 | 4 | **使用场景图 A** | 主场景代入 | `usage_scope[0]` | 通用 |

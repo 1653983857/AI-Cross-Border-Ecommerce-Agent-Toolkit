@@ -39,7 +39,7 @@
 - 成套销售必须写明：Pack x N
 - 品牌配件写法：compatível com <marca> <modelo> 或 para <marca> <modelo>
 - 详情页：Características principais（五点）+ Ficha Técnica（技术规格表，能填就填满）
-- 图片：主图必须纯白底 RGB(255,255,255)，≥800×800，无文字/水印/色块/边框/配件
+- 图片：主图背景干净（2026 新规：白/纯色/实景按类目），≥500×500 建议 1200×1200，1:1；无促销文字/水印/边框/平台属性词
 ```
 
 ### platform = amazon

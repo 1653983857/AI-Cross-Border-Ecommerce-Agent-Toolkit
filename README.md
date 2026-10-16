@@ -50,7 +50,7 @@ SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to
 | **01** | [Market Research Agent](./Agents/01_Market_Research_Agent/) | 市场分析 | 前置判断 / 容量 / 集中度 / 价格带（波谷检测）/ 配置组合 · **带计算脚本** | ✅ v0.3 |
 | **02** | [Product Strategy Agent](./Agents/02_Product_Strategy_Agent/) | 产品策略 | 定位 / 配置 / 主推卖点收敛 / 定价模型 / SKU 四角色 | ✅ v0.3 |
 | 03 | [Listing Creative Agent](./Agents/03_Listing_Creative_Agent/) | 商品内容生成 | 关键词分类 → 标题 → 详情页 → 卖点/参数 | ✅ v0.1 |
-| 04 | [Product Image Agent](./Agents/04_Product_Image_Agent/) | 主图与详情图 | 9 图规划 → 出图 Prompt → 合规自检 | ✅ v0.1 |
+| 04 | [Product Image Agent](./Agents/04_Product_Image_Agent/) | 主图与详情图 | 9 图规划 → 出图 Prompt → **像素级合规校验** · Skill 化 | ✅ v0.4 |
 | 05 | [Product Video Agent](./Agents/05_Product_Video_Agent/) | 短视频生成 | 脚本 → 分镜 → AI 视频 Prompt → 配音字幕 | ✅ v0.1 |
 | 06 | [Advertising Optimization Agent](./Agents/06_Advertising_Optimization_Agent/) | 广告优化 | 四类漏斗诊断 + 盈亏线核算 + 预算/ROI 模型 | ✅ v0.2 |
 | 07 | [Review Analysis Agent](./Agents/07_Review_Analysis_Agent/) | 评论分析 | 八类归因 + 误解型识别 → 详情页修补建议 | ✅ v0.2 |
@@ -143,7 +143,10 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │   │   ├── prompts/    00_system · 01_keyword_to_title · 02_description_builder · 03_compliance_guard
 │   │   ├── templates/  input_product_brief · output_listing_pack
 │   │   └── examples/   powerbank_20000mah.md
-│   ├── 04_Product_Image_Agent/                ✅
+│   ├── 04_Product_Image_Agent/                ✅ v0.4 Skill 化
+│   │   ├── SKILL.md    Agent 直接调用入口 ⭐
+│   │   ├── references/ platform-shopee · platform-mercadolivre · platform-amazon · scenarios-9grid
+│   │   ├── scripts/    check_main_image（像素级合规校验 + --fix）⭐
 │   │   ├── prompts/    00_system · 01_image_plan_9grid · 02_image_prompt_generator
 │   │   ├── templates/  input_image_brief · output_image_prompt_pack
 │   │   └── examples/   pet_carrier.md
@@ -183,7 +186,7 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 | 平台 | 状态 | 标题上限 | 主图规范 | 输出语言 |
 |---|---|---|---|---|
 | **Shopee** | ✅ 一等支持 | 120 字符（前 30 字符权重最高） | 白底，最多 9 图 | PT-BR / EN / 本地语 |
-| **Mercado Livre** | ✅ 一等支持 | 60 字符 | 纯白底 RGB(255,255,255)，≥800×800，最多 12 图 | PT-BR / ES |
+| **Mercado Livre** | ✅ 一等支持 | 60 字符 | 背景干净（白/纯色/实景按类目），主体 85–95%，≥1200×1200 | PT-BR / ES |
 | Amazon | 📄 字段已适配 | 200 字符（建议 80） | 纯白底，≥1000×1000 | EN |
 | TikTok Shop | 📄 字段已适配 | 按站点 | 竖版 9:16 优先 | 本地语 |
 | Shopify | 📄 字段已适配 | 建议 70 | 无硬限制 | EN / 本地语 |

@@ -34,22 +34,25 @@
 | 平台 | 主图要求 | 数量上限 | 尺寸建议 |
 |---|---|---|---|
 | **Shopee** | 白底，商品居中，主体占比 ≥ 客观可视 | **9** | 1:1，≥800×800 |
-| **Mercado Livre** | **纯白底 RGB(255,255,255)**，单一正面角度，完整展示商品，无配件/水印/色块/文字 | **12** | ≥800×800，建议 1000×1000 |
+| **Mercado Livre** | **背景干净即可**（白/纯色/实景**按类目**，2026 新规），单一正面角度，完整展示商品，主体 85–95% | 无硬上限（建议 6–8） | ≥500×500，**建议 1200×1200**，1:1 |
 | Amazon | 纯白底，主体占画面 85% | 9 主图槽 | ≥1000×1000（支持放大镜） |
 | TikTok Shop | 竖版优先 | 9 | 1:1 或 3:4 |
 | Shopify | 无硬限制 | 无 | 1:1 或 4:5 |
 
-### Mercado Livre 主图红线（巴西站尤其严）
+### Mercado Livre 主图红线（2026 更新：背景放宽，其余照旧）
 
-- ❌ 主图不得出现**文字、水印、色块、边框**
+- ✅ 背景：**白 / 纯色 / 实景按类目**（Technology/Beauty/Health/Supermarket 仍建议白底）
+- ❌ 首图不得出现**促销文字、平台属性词**（Mais vendido / Full / MercadoLíder / Oferta relâmpago）
+- ❌ 主图不得出现**水印、边框、非产品自身的 Logo、二维码、联系方式**
 - ❌ 主图不得出现**不出售的配件**
-- ❌ 不得使用**无版权的图片**
+- ✅ 商品占画面 **85–95%**（官方口径 ~95%，三平台最严）
 - ✅ 其他颜色/型号**必须创建变体**，不能靠多张图表达
 - ⚠️ 电子类产品，**保修信息图**在巴西站属于强建议项（消费法要求）
+- 📖 完整规则卡见 [`Agents/04_Product_Image_Agent/references/platform-mercadolivre.md`](../Agents/04_Product_Image_Agent/references/platform-mercadolivre.md)
 
 ### Shopee 主图与 ML 主图在这一点上是冲突的
 
-Shopee 习惯在主图上打卖点文字（"45W Turbo"），Mercado Livre 明令禁止。**同一套素材不能跨平台复用**——04 Product Image Agent 为此提供 `platform_variant` 参数，同一商品输出两套主图方案。
+Shopee 习惯在主图上打卖点文字（"45W Turbo"），Mercado Livre 首图禁止。**同一套素材不能跨平台复用**——04 Product Image Agent 为此提供 `platform_variant` 参数，同一商品输出两套主图方案。
 
 ---
 

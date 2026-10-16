@@ -1,5 +1,9 @@
 # 案例 02 · Bolsa Térmica 20L（保温包）· iterate 模式的回改闭环
 
+> ⚠️ **规则更新说明（2026-10）**：案例中「ML 主图纯白底」为旧规。
+> 现行：白/纯色/实景**按类目**，但背景必须干净、首图禁促销文字。
+> 见 [`../Agents/04_Product_Image_Agent/references/platform-mercadolivre.md`](../../Agents/04_Product_Image_Agent/references/platform-mercadolivre.md)。
+
 > **案例类型**：真实产品 · 已脱敏
 > **覆盖模块**：03 Listing Creative（`mode = iterate`）+ 06 Advertising（预演）
 > **市场**：Shopee 巴西站
