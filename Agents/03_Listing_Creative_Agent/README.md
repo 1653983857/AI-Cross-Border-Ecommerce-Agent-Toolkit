@@ -2,6 +2,19 @@
 
 **商品内容生成智能体** · 从一堆散乱关键词，到一套可直接上架的 Listing。
 
+> **Skill 化（v0.4）**：新增发布前合规校验脚本与 Agent 入口
+> [`SKILL.md`](SKILL.md)。**字符数是 `len()` 实测值**（PT-BR 的 `á` 是 2 字节，
+> 按字节算会误判超限）：
+>
+> ```bash
+> # 标题合规（超限/禁用词/促销词/堆砌/核心词覆盖）
+> python scripts/title_lint.py "标题" --platform shopee --forbidden "iPhone,Samsung"
+> # 参数一致性（文案里每个数字必须溯源到 spec_table）
+> python scripts/spec_consistency.py --spec examples/spec_table.csv --text 详情.md
+> ```
+>
+> 规则卡见 [`references/platform-title-rules.md`](references/platform-title-rules.md)。
+
 ---
 
 ## 一、它解决什么问题
@@ -146,7 +159,7 @@ SOP 3.3 说 Listing 的目标是"让商品页面具备点击和转化能力"。�
 关键词分类：核心词 3 个 / 参数词 11 个 / 人群词 4 个 /
             功能词 8 个 / 场景词 6 个 / 配件词 5 个 / 风险词 6 个（隔离）
   ↓
-标题（Shopee BR，116/120 字符）：
+标题（Shopee BR，115/120 字符，`title_lint.py` 实测）：
   Carregador Portátil 20000mAh 45W Turbo Carga Rápida 3 Saídas
   com Display Digital para Celular iPhone Android Viagem
   ↓

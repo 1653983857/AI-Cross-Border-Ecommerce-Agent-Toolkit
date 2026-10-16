@@ -2,6 +2,17 @@
 
 **产品策略智能体** · 把市场分析的结论，翻译成**可直接交给采购、上架、作图、定价用的产品规格单**。
 
+> **Skill 化（v0.4）**：新增定价算术脚本与 Agent 入口 [`SKILL.md`](SKILL.md)。
+>
+> ```bash
+> # 单 SKU：净利率 / 盈亏平衡价 / 目标价 / 优惠券余量
+> python scripts/sku_pricing.py calc --cost 935 --price 2199 --commission 14 --ad 5
+> # 多 SKU 矩阵：净利率表 + 价格阶梯 + 结构提醒
+> python scripts/sku_pricing.py matrix --file examples/sample-skus.csv --target-margin 32
+> ```
+>
+> 公式与税费口径见 [`references/pricing-rules.md`](references/pricing-rules.md)。**含巴西税费项。**
+
 ---
 
 ## 一、它解决什么问题

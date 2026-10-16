@@ -48,8 +48,8 @@ SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to
 | # | Agent | 中文 | 一句话职责 | 版本 |
 |---|---|---|---|---|
 | **01** | [Market Research Agent](./Agents/01_Market_Research_Agent/) | 市场分析 | 前置判断 / 容量 / 集中度 / 价格带（波谷检测）/ 配置组合 · **带计算脚本** | ✅ v0.3 |
-| **02** | [Product Strategy Agent](./Agents/02_Product_Strategy_Agent/) | 产品策略 | 定位 / 配置 / 主推卖点收敛 / 定价模型 / SKU 四角色 | ✅ v0.3 |
-| 03 | [Listing Creative Agent](./Agents/03_Listing_Creative_Agent/) | 商品内容生成 | 关键词分类 → 标题 → 详情页 → 卖点/参数 | ✅ v0.1 |
+| **02** | [Product Strategy Agent](./Agents/02_Product_Strategy_Agent/) | 产品策略 | 定位 / 配置 / 主推卖点收敛 / 定价模型 / SKU 四角色 · **净利率/盈亏价/券余量矩阵** · Skill 化 | ✅ v0.4 |
+| 03 | [Listing Creative Agent](./Agents/03_Listing_Creative_Agent/) | 商品内容生成 | 关键词分类 → 标题 → 详情页 → 卖点/参数 · **字符实测/参数溯源校验** · Skill 化 | ✅ v0.4 |
 | 04 | [Product Image Agent](./Agents/04_Product_Image_Agent/) | 主图与详情图 | 9 图规划 → 出图 Prompt → **像素级合规校验** · Skill 化 | ✅ v0.4 |
 | 05 | [Product Video Agent](./Agents/05_Product_Video_Agent/) | 短视频生成 | 脚本 → 分镜 → AI 视频 Prompt → 配音字幕 | ✅ v0.1 |
 | 06 | [Advertising Optimization Agent](./Agents/06_Advertising_Optimization_Agent/) | 广告优化 | 四类漏斗诊断 + 盈亏线核算 + **P0/P1/P2 分级动作** · Skill 化 | ✅ v0.4 |
@@ -135,14 +135,20 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │   │   ├── prompts/    00_system · 01_category_precheck · 02_market_analysis
 │   │   ├── templates/  input_category_research · output_market_analysis
 │   │   └── examples/   patinete_eletrico_market.md
-│   ├── 02_Product_Strategy_Agent/             ✅
+│   ├── 02_Product_Strategy_Agent/             ✅ v0.4 Skill 化
+│   │   ├── SKILL.md    Agent 直接调用入口 ⭐
+│   │   ├── references/ pricing-rules（公式与口径）⭐
+│   │   ├── scripts/    sku_pricing（净利率/盈亏价/目标价/券余量矩阵）⭐
 │   │   ├── prompts/    00_system · 01_product_decision · 02_pricing_and_sku
 │   │   ├── templates/  input_strategy_brief · output_product_requirement
-│   │   └── examples/   patinete_eletrico_strategy.md
-│   ├── 03_Listing_Creative_Agent/             ✅
+│   │   └── examples/   patinete_eletrico_strategy.md · sample-skus.csv
+│   ├── 03_Listing_Creative_Agent/             ✅ v0.4 Skill 化
+│   │   ├── SKILL.md    Agent 直接调用入口 ⭐
+│   │   ├── references/ platform-title-rules（标题规则卡）⭐
+│   │   ├── scripts/    title_lint（字符实测/禁用词/堆砌）· spec_consistency（参数溯源）⭐
 │   │   ├── prompts/    00_system · 01_keyword_to_title · 02_description_builder · 03_compliance_guard
 │   │   ├── templates/  input_product_brief · output_listing_pack
-│   │   └── examples/   powerbank_20000mah.md
+│   │   └── examples/   powerbank_20000mah.md · spec_table.csv
 │   ├── 04_Product_Image_Agent/                ✅ v0.4 Skill 化
 │   │   ├── SKILL.md    Agent 直接调用入口 ⭐
 │   │   ├── references/ platform-shopee · platform-mercadolivre · platform-amazon · scenarios-9grid
