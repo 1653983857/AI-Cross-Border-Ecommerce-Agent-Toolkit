@@ -115,6 +115,7 @@ flowchart LR
 
 ```text
 AI-Cross-Border-Ecommerce-Agent-Toolkit/
+├── SKILL.md                      # 伞形 Skill 总入口 ⭐（整个文件夹可整体安装为 Skill）
 ├── README.md                     # 你在这里
 ├── LICENSE  CONTRIBUTING.md  ROADMAP.md  CHANGELOG.md
 │
