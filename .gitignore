@@ -29,6 +29,7 @@ uploads/
 
 # 样本数据需入库（用于验证环境、复现案例、核对预期结果）
 !Agents/**/samples/*.csv
+!Agents/**/examples/*.csv
 
 # ---- 生成物 ----
 output/
