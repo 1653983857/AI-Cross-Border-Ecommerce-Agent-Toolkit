@@ -47,7 +47,7 @@ SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to
 
 | # | Agent | 中文 | 一句话职责 | 版本 |
 |---|---|---|---|---|
-| **01** | [Market Research Agent](./Agents/01_Market_Research_Agent/) | 市场分析 | 前置判断 / 容量 / 集中度 / 价格带（波谷检测）/ 配置组合 · **带计算脚本** | ✅ v0.3 |
+| **01** | [Market Research Agent](./Agents/01_Market_Research_Agent/) | 市场分析 | 前置判断 / 容量 / 集中度 / 价格带（波谷检测）/ 配置组合 · **带计算脚本** | ✅ v0.4 |
 | **02** | [Product Strategy Agent](./Agents/02_Product_Strategy_Agent/) | 产品策略 | 定位 / 配置 / 主推卖点收敛 / 定价模型 / SKU 四角色 · **净利率/盈亏价/券余量矩阵** · Skill 化 | ✅ v0.4 |
 | 03 | [Listing Creative Agent](./Agents/03_Listing_Creative_Agent/) | 商品内容生成 | 关键词分类 → 标题 → 详情页 → 卖点/参数 · **字符实测/参数溯源校验** · Skill 化 | ✅ v0.4 |
 | 04 | [Product Image Agent](./Agents/04_Product_Image_Agent/) | 主图与详情图 | 9 图规划 → 出图 Prompt → **像素级合规校验** · Skill 化 | ✅ v0.4 |
@@ -129,7 +129,8 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │
 ├── Agents/                       # AI 智能体模块
 │   ├── README.md                 # 模块索引 + 交接契约
-│   ├── 01_Market_Research_Agent/              ✅
+│   ├── 01_Market_Research_Agent/              ✅ v0.4 Skill 化
+│   │   ├── SKILL.md    Agent 直接调用入口 ⭐
 │   │   ├── scripts/    shaduola_parser · market_metrics · make_sample ⭐
 │   │   ├── samples/    样本数据（含预期结果，可复现）
 │   │   ├── prompts/    00_system · 01_category_precheck · 02_market_analysis
