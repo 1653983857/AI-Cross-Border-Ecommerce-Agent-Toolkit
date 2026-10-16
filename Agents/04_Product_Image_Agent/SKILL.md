@@ -146,6 +146,9 @@ python scripts/check_main_image.py 出图.png --platform shopee --fix 修复后.
 
 **校验标准来自平台规则卡，不是拍脑袋。** 校验不过的图不许交付。
 
+**自测**：[`tests/`](tests/README.md) 内置 5 张合成夹具（含故意违规项）与预期结果，
+clone 后跑一遍即可验证脚本是否正常。
+
 ---
 
 ## 已知限制

@@ -96,7 +96,10 @@ SOP 3.3 写了一句：
 │   ├── platform-amazon.md          # Amazon 对照卡（最严白底标准）
 │   └── scenarios-9grid.md          # 9 图场景库（每图位：目的/构图/prompt 骨架/平台差异）
 ├── scripts/
-│   └── check_main_image.py         # 像素级合规校验 + --fix 自动修复（纯 Pillow）
+│   └── check_main_image.py         # 像素级合规校验 + --fix 自动修复（纯 Pillow）⭐
+├── tests/
+│   ├── README.md                   # 5 张合成夹具 + 预期结果（clone 即可自测）⭐
+│   └── *.png                       # ml_pass · amazon_fail · shopee_fix/fixed · ml_chaotic
 ├── prompts/ templates/ examples/   # 原有四件套
 ```
 
