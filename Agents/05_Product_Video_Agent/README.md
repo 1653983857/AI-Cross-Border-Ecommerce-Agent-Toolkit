@@ -2,6 +2,12 @@
 
 **商品短视频生成智能体** · 从一句卖点，到一条能直接录的分镜脚本。
 
+> **v0.4 Skill 化**：新增 [`SKILL.md`](./SKILL.md)（Agent 入口）+
+> [`references/video-specs.md`](./references/video-specs.md)（平台视频规范卡）+
+> [`scripts/video_timing.py`](./scripts/video_timing.py)（**时长与字幕的确定性校验**：
+> 词数→时长换算、逐句时间轴、字幕行长、钩子检查、总时长 vs 15s/30s 目标 ±15% 容差）。
+> 时长校验实测：65 词 ÷ 2.5 词/秒 = 26.0s，与案例文档记录完全一致。
+
 ---
 
 ## 一、它解决什么问题
