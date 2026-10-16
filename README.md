@@ -52,7 +52,7 @@ SOP 章节与 Agent 模块的逐条对应关系见 [`docs/00_Architecture_SOP_to
 | 03 | [Listing Creative Agent](./Agents/03_Listing_Creative_Agent/) | 商品内容生成 | 关键词分类 → 标题 → 详情页 → 卖点/参数 | ✅ v0.1 |
 | 04 | [Product Image Agent](./Agents/04_Product_Image_Agent/) | 主图与详情图 | 9 图规划 → 出图 Prompt → **像素级合规校验** · Skill 化 | ✅ v0.4 |
 | 05 | [Product Video Agent](./Agents/05_Product_Video_Agent/) | 短视频生成 | 脚本 → 分镜 → AI 视频 Prompt → 配音字幕 | ✅ v0.1 |
-| 06 | [Advertising Optimization Agent](./Agents/06_Advertising_Optimization_Agent/) | 广告优化 | 四类漏斗诊断 + 盈亏线核算 + 预算/ROI 模型 | ✅ v0.2 |
+| 06 | [Advertising Optimization Agent](./Agents/06_Advertising_Optimization_Agent/) | 广告优化 | 四类漏斗诊断 + 盈亏线核算 + **P0/P1/P2 分级动作** · Skill 化 | ✅ v0.4 |
 | 07 | [Review Analysis Agent](./Agents/07_Review_Analysis_Agent/) | 评论分析 | 八类归因 + 误解型识别 → 详情页修补建议 | ✅ v0.2 |
 
 > **这七个模块构成一条完整链路，而且是闭环的**：
@@ -154,10 +154,13 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │   │   ├── prompts/    00_system · 01_script_and_storyboard · 02_ai_video_and_voice
 │   │   ├── templates/  input_video_brief · output_video_pack
 │   │   └── examples/   air_fryer.md
-│   ├── 06_Advertising_Optimization_Agent/     ✅
+│   ├── 06_Advertising_Optimization_Agent/     ✅ v0.4 Skill 化
+│   │   ├── SKILL.md    Agent 直接调用入口 ⭐
+│   │   ├── references/ metrics · diagnosis · playbooks · actions ⭐
+│   │   ├── scripts/    ad_metrics（盈亏线/可承受CPC/P0-P2分级，纯标准库）⭐
 │   │   ├── prompts/    00_system · 01_funnel_diagnosis · 02_budget_roi_model
 │   │   ├── templates/  input_ad_data · output_ad_action_plan
-│   │   └── examples/   powerbank_20000mah_ads.md
+│   │   └── examples/   powerbank_20000mah_ads.md · sample-ad-report.csv
 │   └── 07_Review_Analysis_Agent/              ✅
 │       ├── prompts/    00_system · 01_classify_and_attribute · 02_misunderstanding_detector
 │       ├── templates/  input_review_batch · output_review_insights
