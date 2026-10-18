@@ -22,6 +22,19 @@
 
 ## 二、核心公式
 
+> **2026-10 起**：本模板的手工计算已由脚本 `Agents/02_Product_Strategy_Agent/scripts/sku_pricing.py`
+> 自动化，并内置 5 个平台的费率预设（Shopee BR / ML Clássico / ML Premium / Amazon BR / TikTok Shop BR，
+> 含价格分档佣金与按件固定费）：
+>
+> ```bash
+> python Agents/02_Product_Strategy_Agent/scripts/sku_pricing.py calc --platform shopee_br --cost 935 --price 2199
+> python Agents/02_Product_Strategy_Agent/scripts/sku_pricing.py --list-platforms
+> ```
+>
+> 费率口径与来源见 `Agents/02_Product_Strategy_Agent/references/pricing-rules.md`；
+> **没有可靠费率来源的平台不做预设**（Magalu / Temu / Shein 等），手工传参。
+> 下面的手工公式保留用于理解原理与核对脚本结果。
+
 ### 售价公式
 
 ```

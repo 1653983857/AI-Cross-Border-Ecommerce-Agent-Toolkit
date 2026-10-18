@@ -24,7 +24,15 @@ metadata:
 ## 快速开始
 
 ```bash
-# 单 SKU：净利率 / 盈亏平衡价 / 目标价 / 优惠券余量
+# 平台预设（推荐）：费率来自 scripts/platform_fees.json，含价格分档佣金/固定费
+# 可用平台：shopee_br / mercadolivre_br / mercadolivre_br_premium / amazon_br / tiktok_br
+python scripts/sku_pricing.py calc --platform shopee_br --cost 935 --price 2199
+python scripts/sku_pricing.py --list-platforms          # 查看全部预设与费率来源
+
+# 多 SKU 矩阵 + 价格阶梯 + 券余量（读 CSV）
+python scripts/sku_pricing.py matrix --file examples/sample-skus.csv --platform mercadolivre_br
+
+# 手工口径（兼容旧用法，显式参数永远优先于预设）
 python scripts/sku_pricing.py calc --cost 935 --price 2199 \
     --commission 14 --return 2 --ad 5 --tax 0 --target-margin 32
 

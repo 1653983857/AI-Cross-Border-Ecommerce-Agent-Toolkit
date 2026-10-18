@@ -21,6 +21,71 @@ import argparse
 import csv
 import json
 import sys
+from pathlib import Path
+
+# 与 02 模块共用同一份平台费率预设（单一事实来源）
+PLATFORM_FEES = (Path(__file__).resolve().parents[2]
+                 / "02_Product_Strategy_Agent" / "scripts" / "platform_fees.json")
+
+
+def _tier_lookup(price, tiers, default=0.0):
+    for t in tiers or []:
+        mx = t.get("max")
+        if mx is None or price <= float(mx):
+            return float(t.get("pct", t.get("fee", default)))
+    return default
+
+
+def _resolve_fees(args):
+    """费率解析：显式 CLI 参数 > 平台预设（--platform）> 0。"""
+    preset = None
+    if getattr(args, "platform", None):
+        try:
+            plats = json.loads(PLATFORM_FEES.read_text(encoding="utf-8"))
+        except OSError:
+            sys.exit(f"[ERROR] 读不到平台费率表：{PLATFORM_FEES}")
+        key = args.platform.strip()
+        if key not in plats:
+            matches = [k for k in plats
+                       if not k.startswith("_") and (k == key or k.startswith(key + "_"))]
+            if len(matches) == 1:
+                key = matches[0]
+            else:
+                keys = "、".join(k for k in plats if not k.startswith("_"))
+                sys.exit(f"[INPUT_MISSING] 未知平台 {args.platform!r}。可用：{keys}")
+        preset = plats[key]
+
+    price = args.price
+    if args.commission is not None:
+        comm = args.commission
+    elif preset:
+        if "commission_pct" in preset:
+            comm = float(preset["commission_pct"])
+        elif preset.get("commission_tiers"):
+            comm = _tier_lookup(price, preset["commission_tiers"])
+        else:
+            comm = 0.0
+    else:
+        comm = 0.0
+
+    def scalar(flag, pkey):
+        if flag is not None:
+            return float(flag)
+        if preset and pkey in preset:
+            return float(preset[pkey])
+        return 0.0
+
+    if getattr(args, "fixed_fee", None) is not None:
+        ff = float(args.fixed_fee)
+    elif preset and preset.get("fixed_fee_tiers"):
+        ff = _tier_lookup(price, preset["fixed_fee_tiers"])
+    else:
+        ff = 0.0
+
+    return comm, scalar(args.return_rate, "return_pct"), scalar(args.tax, "tax_pct"), \
+        scalar(getattr(args, "extra_pct", None), "extra_pct"), ff, \
+        (preset or {}).get("label", getattr(args, "platform", None) or "custom")
+import sys
 
 # 列名自动映射（中 / 英 / 葡）
 COLUMN_MAP = {
@@ -78,11 +143,14 @@ def _pick(header, kind):
 
 def cost_model(args):
     price = args.price
+    comm, ret, tax, extra, ff, plat_label = _resolve_fees(args)
     contrib = (price - args.product_cost - args.first_leg - args.shipping
-               - price * args.commission / 100 - price * args.return_rate / 100
-               - price * args.tax / 100)
+               - price * (comm + ret + tax + extra) / 100 - ff)
     be_acos = contrib / price if price else 0
-    return dict(price=price, pre_ad_contribution=round(contrib, 2),
+    return dict(price=price, platform=plat_label,
+                commission_pct_applied=comm, fixed_fee_applied=round(ff, 2),
+                extra_pct_applied=extra,
+                pre_ad_contribution=round(contrib, 2),
                 break_even_acos=round(be_acos, 4),
                 break_even_roas=round(1 / be_acos, 2) if be_acos > 0 else None)
 
@@ -229,24 +297,27 @@ def main():
     c.add_argument("--product-cost", type=float, required=True)
     c.add_argument("--shipping", type=float, default=0, help="尾程运费")
     c.add_argument("--first-leg", type=float, default=0, help="头程运费")
-    c.add_argument("--commission", type=float, default=0, help="平台佣金 %%")
-    c.add_argument("--return", dest="return_rate", type=float, default=0, help="退货损耗 %%")
-    c.add_argument("--tax", type=float, default=0, help="综合有效税率 %%（巴西税制自行折算）")
+    c.add_argument("--platform", help="平台费率预设 key（与 02 sku_pricing 共用 platform_fees.json）")
+    c.add_argument("--commission", type=float, default=None, help="平台佣金 %%（覆盖预设）")
+    c.add_argument("--return", dest="return_rate", type=float, default=None, help="退货损耗 %%（覆盖预设）")
+    c.add_argument("--tax", type=float, default=None, help="综合有效税率 %%（巴西税制自行折算）")
+    c.add_argument("--extra-pct", type=float, default=None, help="平台附加 %%（如免运计划；覆盖预设）")
+    c.add_argument("--fixed-fee", type=float, default=None, help="按件固定费 R$（覆盖预设阶梯）")
     c.add_argument("--target-acos", type=float, help="目标 ACoS %%")
     c.add_argument("--cvr", type=float, help="转化率 %%（算可承受 CPC 用）")
 
     d = sub.add_parser("diagnose", help="读广告导出 CSV → 指标 + P0/P1/P2 分级动作")
     d.add_argument("--file", required=True)
-    for a in ("price", "product-cost", "shipping", "first-leg", "commission",
-              "return", "tax", "target-acos"):
-        pass
     d.add_argument("--price", type=float, required=True)
     d.add_argument("--product-cost", type=float, required=True)
     d.add_argument("--shipping", type=float, default=0)
     d.add_argument("--first-leg", type=float, default=0)
-    d.add_argument("--commission", type=float, default=0)
-    d.add_argument("--return", dest="return_rate", type=float, default=0)
-    d.add_argument("--tax", type=float, default=0)
+    d.add_argument("--platform", help="平台费率预设 key（与 02 sku_pricing 共用 platform_fees.json）")
+    d.add_argument("--commission", type=float, default=None)
+    d.add_argument("--return", dest="return_rate", type=float, default=None)
+    d.add_argument("--tax", type=float, default=None)
+    d.add_argument("--extra-pct", type=float, default=None)
+    d.add_argument("--fixed-fee", type=float, default=None)
     d.add_argument("--target-acos", type=float, default=25)
     d.add_argument("--min-impressions", type=int, default=1000, help="数据充分性门槛")
     d.add_argument("--json", action="store_true")

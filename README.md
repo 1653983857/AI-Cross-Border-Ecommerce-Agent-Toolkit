@@ -140,7 +140,7 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 │   ├── 02_Product_Strategy_Agent/             ✅ v0.4 Skill 化
 │   │   ├── SKILL.md    Agent 直接调用入口 ⭐
 │   │   ├── references/ pricing-rules（公式与口径）⭐
-│   │   ├── scripts/    sku_pricing（净利率/盈亏价/目标价/券余量矩阵）⭐
+│   │   ├── scripts/    sku_pricing（净利率/盈亏价/目标价/券余量矩阵）+ platform_fees.json（5 平台费率预设）⭐
 │   │   ├── prompts/    00_system · 01_product_decision · 02_pricing_and_sku
 │   │   ├── templates/  input_strategy_brief · output_product_requirement
 │   │   └── examples/   patinete_eletrico_strategy.md · sample-skus.csv
