@@ -38,5 +38,47 @@
       "Pix 支付补贴 5%（售价 80–499）/ 8%（≥500），可部分对冲固定费上涨；免运计划 2026-03 起全站免费参与",
       "CPF 个人卖家近 90 天订单 >450 笔：每单加收 R$3；售价 <R$12 递减收费、<R$8 按售价 50% 收固定费"
     ]
+  },
+
+  "mercadolivre_br": {
+    "label": "Mercado Livre 巴西（Clássico）",
+    "commission_pct": 11,
+    "fixed_fee_tiers": [
+      {"max": 79.0, "fee": 6.5},
+      {"max": null, "fee": 0}
+    ],
+    "return_pct": 2,
+    "ad_pct": 5,
+    "tax_pct": 0,
+    "extra_pct": 0,
+    "sources": [
+      "Ecommerce na Prática / Conta Azul 2026：Clássico 佣金 10–14%（计算器主流口径 11%），Premium 15–19%（口径 16%）",
+      "Ecommerce Puro 2026-03：<R$79 的固定费自 2026-03-02 起改为按包裹重量/尺寸的变量物流成本；≥R$79 仅佣金",
+      "Go Smarter ML 计算器 2026：Clássico 11% + 类目调整（Moda +2pp / Eletrônicos premium +3pp / Livros −1pp），<R$79 固定费 R$6.50"
+    ],
+    "notes": [
+      "<R$79 固定费 R$6.50 是旧表估算值 —— 2026-03-02 起改为按重量/尺寸计的变量物流成本，轻小件可能更低、大件更低值更高，精确值须按包裹规格在卖家中心查表",
+      "产品定价 ≥R$79 可省掉按件费：R$70 的商品『为省 R$6.50 而定价多付一倍』是常见误区，提价过线是第一个毛利杠杆",
+      "Premium 广告位（Parceiro/Mercado Ads 另计）：满额免邮与 Full 物流成本未计入本预设，需按实际运营模式补充"
+    ]
+  },
+
+  "mercadolivre_br_premium": {
+    "label": "Mercado Livre 巴西（Premium）",
+    "commission_pct": 16,
+    "fixed_fee_tiers": [
+      {"max": 79.0, "fee": 6.5},
+      {"max": null, "fee": 0}
+    ],
+    "return_pct": 2,
+    "ad_pct": 5,
+    "tax_pct": 0,
+    "extra_pct": 0,
+    "sources": [
+      "同 mercadolivre_br；Premium 佣金 15–19%，计算器主流口径 16%（含 12x 免息分期与更高曝光）"
+    ],
+    "notes": [
+      "Premium 比 Clássico 贵约 5pp，换取分期免息 + 更高曝光位 —— 高客单价商品通常值得，低毛利商品先跑 Clássico 验证转化"
+    ]
   }
 }

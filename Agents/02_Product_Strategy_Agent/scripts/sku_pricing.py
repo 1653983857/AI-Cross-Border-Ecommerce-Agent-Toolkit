@@ -342,6 +342,7 @@ def main():
     _add_common(c)
     c.add_argument("--cost", type=float, required=True, help="到岸成本 R$")
     c.add_argument("--price", type=float, required=True, help="售价 R$")
+    c.add_argument("--json", action="store_true", help="仅输出 JSON")
 
     m = sub.add_parser("matrix", help="多 SKU 矩阵：读 CSV 出净利率表 + 价格阶梯 + 券余量")
     _add_common(m)
