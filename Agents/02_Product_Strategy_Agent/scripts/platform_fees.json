@@ -95,13 +95,13 @@
     "extra_pct": 0,
     "sources": [
       "Amazon Seller Central BR 官方费率表（Selling on Amazon fee schedule，2026-10-31 生效版）",
-      "Professional 计划 R\$19/月（新卖家 12 个月免订阅促销）；Individual 计划无月费但每件 R\$2.00（用 --fixed-fee 2 模拟）",
-      "FBA 履约费未计入本预设（按尺寸/重量另计：小件 ≤250g 约 R\$9.90、中件 ≤500g 约 R\$12.15，第三方口径待官方核对）"
+      "Professional 计划 R$19/月（新卖家 12 个月免订阅促销）；Individual 计划无月费但每件 R$2.00（用 --fixed-fee 2 模拟）",
+      "FBA 履约费未计入本预设（按尺寸/重量另计：小件 ≤250g 约 R$9.90、中件 ≤500g 约 R$12.15，第三方口径待官方核对）"
     ],
     "notes": [
-      "15% 为 Most categories 通用档；常用类目差异：Electronics 11–13%（Electronics & PC Accessories >R\$100 部分降为 10%）、Home/Kitchen 12%、PC 12%、Sports 12%、Beauty 13%、Books/Media 15%、Furniture 15%（>R\$200 部分 10%）；最低佣金 R\$1.00/件",
+      "15% 为 Most categories 通用档；常用类目差异：Electronics 11–13%（Electronics & PC Accessories >R$100 部分降为 10%）、Home/Kitchen 12%、PC 12%、Sports 12%、Beauty 13%、Books/Media 15%、Furniture 15%（>R$200 部分 10%）；最低佣金 R$1.00/件",
       "referral fee 按 买家支付总额（商品+运费+礼品包装）计，不只是商品价",
-      "退货管理费：退款时扣 min(R\$10, 20%×referral fee) —— 与退货损耗预留（return_pct）是两回事",
+      "退货管理费：退款时扣 min(R$10, 20%×referral fee) —— 与退货损耗预留（return_pct）是两回事",
       "FBA 模式需另加履约费+仓储费（Q4 旺季上浮），FBM 自发货则运费成本进到岸成本"
     ]
   }
