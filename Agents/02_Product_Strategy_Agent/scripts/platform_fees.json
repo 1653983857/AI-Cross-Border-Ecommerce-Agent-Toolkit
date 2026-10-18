@@ -104,5 +104,32 @@
       "退货管理费：退款时扣 min(R$10, 20%×referral fee) —— 与退货损耗预留（return_pct）是两回事",
       "FBA 模式需另加履约费+仓储费（Q4 旺季上浮），FBM 自发货则运费成本进到岸成本"
     ]
+  },
+
+  "tiktok_br": {
+    "label": "TikTok Shop 巴西",
+    "commission_tiers": [
+      {"max": 49.99, "pct": 10},
+      {"max": null, "pct": 6}
+    ],
+    "fixed_fee_tiers": [
+      {"max": 49.99, "fee": 4.0},
+      {"max": null, "fee": 6.0}
+    ],
+    "return_pct": 2,
+    "ad_pct": 5,
+    "tax_pct": 0,
+    "extra_pct": 6,
+    "sources": [
+      "TikTok Shop BR 2026-06-12 公告、2026-07-15 00:00（巴西利亚时间）生效：折扣后售价 <R$50 → 佣金 10% + 固定费 R$4；≥R$50 → 佣金 6% + 固定费 R$6",
+      "Exame Lab（2026-07 表格）/ SellerMargin Tools / Vendedor Lucrativo 计算器交叉印证",
+      "免运计划（Programa de Taxas de Envio）6%，单件上限 R$50，注册后自动加入（Seller Center 可退出）—— 计入 extra_pct"
+    ],
+    "notes": [
+      "分档基准是『卖家折扣后』的售价（平台补贴不算在内）—— R$55 商品打 R$10 券按 R$45 结算，会跳档到 10%+R$4",
+      "低价位陷阱：R$20 商品 = 10%（R$2）+ 固定费 R$4 = 30% 起步，加免运 6% 到 36% —— 低客单价先算账再上架",
+      "新店 60–90 天免佣金（活动而定），但固定费与免运计划不免；达人对佣金（通常 8–15%）另算，可与平台费叠加",
+      "无月费；用 --extra-pct 0 模拟退出免运计划的口径"
+    ]
   }
 }
