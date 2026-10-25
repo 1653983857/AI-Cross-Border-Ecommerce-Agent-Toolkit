@@ -1,0 +1,2 @@
+financetoolkit==2.2.3
+akshare==1.19.3
