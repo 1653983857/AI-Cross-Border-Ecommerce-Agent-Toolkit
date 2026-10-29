@@ -1,0 +1,19 @@
+[submodule "external/investment/taxue-invest"]
+	path = external/investment/taxue-invest
+	url = https://github.com/taxueseek/taxue-invest.git
+
+[submodule "external/investment/InvestSkill"]
+	path = external/investment/InvestSkill
+	url = https://github.com/yennanliu/InvestSkill.git
+
+[submodule "external/investment/claude-trading-skills"]
+	path = external/investment/claude-trading-skills
+	url = https://github.com/tradermonty/claude-trading-skills.git
+
+[submodule "external/investment/financial-services"]
+	path = external/investment/financial-services
+	url = https://github.com/anthropics/financial-services.git
+
+[submodule "external/investment/PyPortfolioOpt"]
+	path = external/investment/PyPortfolioOpt
+	url = https://github.com/PyPortfolio/PyPortfolioOpt.git

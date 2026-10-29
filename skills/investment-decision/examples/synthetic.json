@@ -1,0 +1,141 @@
+{
+  "synthetic": true,
+  "as_of": "2026-10-29",
+  "profile": {
+    "base_currency": "CNY",
+    "cash_available": 100000,
+    "emergency_reserve": 25000,
+    "near_term_reserve": 15000,
+    "horizon_years": 5,
+    "max_stress_loss": 0.14,
+    "max_annual_volatility": 0.18,
+    "max_single_fund_weight": 0.4,
+    "max_turnover": 1.5,
+    "cash_annual_return": 0.015,
+    "min_trade_amount": 10,
+    "allowed_markets": [
+      "CN"
+    ],
+    "max_history_lag_days": 7,
+    "max_quote_lag_days": 7
+  },
+  "funds": [
+    {
+      "id": "SYN-CN-EQUITY",
+      "name": "合成国内权益",
+      "market": "CN",
+      "instrument_type": "mutual_fund",
+      "currency": "CNY",
+      "current_value": 20000,
+      "sellable_value": 20000,
+      "buy_allowed": true,
+      "sell_allowed": true,
+      "buy_fee_rate": 0.001,
+      "sell_fee_rate": 0.002,
+      "max_buy_amount": 100000,
+      "min_buy_amount": 10,
+      "buy_increment": 0.01,
+      "redemption_increment": 0.01,
+      "sell_settlement_days": 3,
+      "forward_return_low": 0.065,
+      "forward_return_base": 0.09,
+      "forward_return_high": 0.12,
+      "return_source": "SYNTHETIC forward estimates for implementation validation only",
+      "data_source": "SYNTHETIC total-return series; no real fund",
+      "quote_as_of": "2026-10-29",
+      "exposures": {
+        "equity": 0.95,
+        "us": 0
+      }
+    },
+    {
+      "id": "SYN-QDII-EQUITY",
+      "name": "合成海外权益QDII",
+      "market": "CN",
+      "instrument_type": "mutual_fund",
+      "currency": "CNY",
+      "current_value": 40000,
+      "sellable_value": 40000,
+      "buy_allowed": true,
+      "sell_allowed": true,
+      "buy_fee_rate": 0.001,
+      "sell_fee_rate": 0.002,
+      "max_buy_amount": 100000,
+      "min_buy_amount": 10,
+      "buy_increment": 0.01,
+      "redemption_increment": 0.01,
+      "sell_settlement_days": 3,
+      "forward_return_low": 0.06,
+      "forward_return_base": 0.085,
+      "forward_return_high": 0.115,
+      "return_source": "SYNTHETIC forward estimates for implementation validation only",
+      "data_source": "SYNTHETIC total-return series; no real fund",
+      "quote_as_of": "2026-10-29",
+      "exposures": {
+        "equity": 0.95,
+        "us": 0.95
+      }
+    },
+    {
+      "id": "SYN-BOND",
+      "name": "合成债券",
+      "market": "CN",
+      "instrument_type": "mutual_fund",
+      "currency": "CNY",
+      "current_value": 20000,
+      "sellable_value": 20000,
+      "buy_allowed": true,
+      "sell_allowed": true,
+      "buy_fee_rate": 0.001,
+      "sell_fee_rate": 0.002,
+      "max_buy_amount": 100000,
+      "min_buy_amount": 10,
+      "buy_increment": 0.01,
+      "redemption_increment": 0.01,
+      "sell_settlement_days": 3,
+      "forward_return_low": 0.025,
+      "forward_return_base": 0.035,
+      "forward_return_high": 0.045,
+      "return_source": "SYNTHETIC forward estimates for implementation validation only",
+      "data_source": "SYNTHETIC total-return series; no real fund",
+      "quote_as_of": "2026-10-29",
+      "exposures": {
+        "equity": 0,
+        "us": 0
+      }
+    }
+  ],
+  "history": {
+    "path": "synthetic-total-return.csv",
+    "kind": "total_return_base_currency",
+    "base_currency": "CNY",
+    "observations_per_year": 252,
+    "min_observations": 252,
+    "source": "SYNTHETIC deterministic RNG 29102026",
+    "as_of": "2026-10-29"
+  },
+  "exposure_caps": {
+    "equity": 0.6,
+    "us": 0.3
+  },
+  "stress_scenarios": [
+    {
+      "name": "synthetic_equity_crash",
+      "source": "SYNTHETIC stress assumptions",
+      "returns": {
+        "SYN-CN-EQUITY": -0.4,
+        "SYN-QDII-EQUITY": -0.32,
+        "SYN-BOND": -0.04
+      }
+    },
+    {
+      "name": "synthetic_rates_up",
+      "source": "SYNTHETIC stress assumptions",
+      "returns": {
+        "SYN-CN-EQUITY": -0.12,
+        "SYN-QDII-EQUITY": -0.15,
+        "SYN-BOND": -0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "基金投资决策"
+  short_description: "按资金用途与风险预算计算国内海外基金配置金额、买卖持有和再平衡"
+  default_prompt: "使用 $investment-decision 分析我当前阶段的基金配置，给出目标金额、本次买卖支付金额、依据和调整条件。"

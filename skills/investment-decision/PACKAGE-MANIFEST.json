@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "d1735dcc67d5040493f9c13872a6e91be8fbfe368805ccdcae52b4df55195651",
+      "bytes": 64
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "16b04acd84086f98569b08f80a20b399b3ee70d1f7a9c97811d513580af763a9",
+      "bytes": 325
+    },
+    {
+      "path": "assets/upstream-reference.zip",
+      "sha256": "a1645cfb9ccbfe62fff85e5c4e925087995b0fe6470f9a6cb30e8a5d49896249",
+      "bytes": 596842
+    },
+    {
+      "path": "examples/profile-template.json",
+      "sha256": "b47bb9bdc3ba8d6926c13f4b70dfd6b8ac8340d303febb956fdb18eb715d0de7",
+      "bytes": 675
+    },
+    {
+      "path": "examples/synthetic-total-return.csv",
+      "sha256": "f6b33a7f890aba665d009e7872dd33804f7a15a25bb4f367cac4d814988370b9",
+      "bytes": 16256
+    },
+    {
+      "path": "examples/synthetic.json",
+      "sha256": "0cabdf7a454975663808458556c99ccca57ed65fed45b12fad0a2770c45dcd3c",
+      "bytes": 4046
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a121fd2a27abbbbaa80947f314b92dda8eed91db9bc3b8615d878b0d4985be5d",
+      "bytes": 1141
+    },
+    {
+      "path": "LICENSES/claude-trading-skills.txt",
+      "sha256": "7ecda97a735dabfc1f7b9681d4275440ac458e1cdccedf0a5dc7250dc6efbfab",
+      "bytes": 1069
+    },
+    {
+      "path": "LICENSES/financial-services.txt",
+      "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
+      "bytes": 11359
+    },
+    {
+      "path": "LICENSES/InvestSkill.txt",
+      "sha256": "6e0c9ccbaaa48f3fcc5cc54628f24b561aee0f6876f3eb4df68a546314e43eb1",
+      "bytes": 1067
+    },
+    {
+      "path": "LICENSES/PyPortfolioOpt.txt",
+      "sha256": "00dfdf1b57237752512a482ea065fa607b03274b3eb153685ac7419622b73382",
+      "bytes": 1078
+    },
+    {
+      "path": "LICENSES/taxue-invest.txt",
+      "sha256": "d794bd6c495fe0125f20621d153965539efa684b98c26e23f0e939d91ffddc8f",
+      "bytes": 2945
+    },
+    {
+      "path": "references/fund-research.md",
+      "sha256": "90b9e01a7d6d41f349b878da75a0da49e55ae4be63f69c71d3a563fabbb95a0d",
+      "bytes": 3333
+    },
+    {
+      "path": "references/input-schema.md",
+      "sha256": "8f0409fa57062ce962b843954de6e48bf4b9f90da23eb2987693200b05a14d1e",
+      "bytes": 5292
+    },
+    {
+      "path": "references/integration.md",
+      "sha256": "afba3e8d835e59a7341d1d7dd6b7add953a998c6d829a49bc2a065870502eb80",
+      "bytes": 2142
+    },
+    {
+      "path": "references/methodology.md",
+      "sha256": "cc27314ac145e299be5fde38b9518a407d906a55afbc6470cf39e5685f8b876a",
+      "bytes": 3825
+    },
+    {
+      "path": "references/review.md",
+      "sha256": "7f6304957f0a7db561b9ea8a6253408803b2b5ed75625c27e793a8dd7498db55",
+      "bytes": 1284
+    },
+    {
+      "path": "references/sources.lock.json",
+      "sha256": "5291942d8f9016d8c12c5edef489ddd77754449b301d22012950e156ea5be4d2",
+      "bytes": 21074
+    },
+    {
+      "path": "requirements-lock.txt",
+      "sha256": "55cb5a4ac9c19125889e3255345ae31b62d9f99afa7b486f9109cc2fd16252f1",
+      "bytes": 500
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "0fded0e7b4ff18e1e114d06c768563ac1f36826afea9e33d20c0ded96a0ad68d",
+      "bytes": 76
+    },
+    {
+      "path": "scripts/_runtime.py",
+      "sha256": "c6296d77d9408eb591db3e2c54967c18de507bf1966ba912d591a21ccf925f51",
+      "bytes": 424
+    },
+    {
+      "path": "scripts/allocate.py",
+      "sha256": "9c8a35764d2d51f450e2c3e8cdc1224c97b239496a687acd3e1683e78ccdd351",
+      "bytes": 26657
+    },
+    {
+      "path": "scripts/bootstrap.py",
+      "sha256": "5b5c91d64cd7559b0120d62753d704be8239bc677147ae300bfc9d637c0d7686",
+      "bytes": 492
+    },
+    {
+      "path": "scripts/doctor.py",
+      "sha256": "f69c8adefd42e091c741840733ce7ab6938144d9285714308eb69a2e8ef8a1ec",
+      "bytes": 1503
+    },
+    {
+      "path": "scripts/library.py",
+      "sha256": "6961d0f2bbccfbbc836dbd0933e29295d143365dda893b42db5bfba572aeffd4",
+      "bytes": 3153
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "884d8268d59bf244a9e0c96dc99ad1727ff9cf3bb23f635fbf873c53de8c0269",
+      "bytes": 6962
+    },
+    {
+      "path": "tests/test_allocate.py",
+      "sha256": "f897008da4ee045f3ae9c3cc9008cd71474c9b747e65e22ad984a26c1b751137",
+      "bytes": 7898
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "60066ef3cb4e9ce0c95128f4d20b43c0df34ea597b2dd7f00e7eb277718838e3",
+      "bytes": 1535
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "344685475e47ababe6f8baa7c544dddce9d56405f8c0dad3630eb3a4b342711c",
+      "bytes": 1898
+    }
+  ]
+}

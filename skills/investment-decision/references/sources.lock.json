@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-29",
+  "sources": [
+    {
+      "id": "taxue-invest",
+      "repository": "taxueseek/taxue-invest",
+      "commit": "90927de6e7d581725969ae4f886464e6f398b00f",
+      "license": "Prosperity-3.0.0",
+      "source_url": "https://github.com/taxueseek/taxue-invest/tree/90927de6e7d581725969ae4f886464e6f398b00f",
+      "submodule_path": "external/investment/taxue-invest",
+      "snapshot_scope": "selected reference documents; full source is a pinned submodule",
+      "upstream_catalog_file_count": 204,
+      "snapshot_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d794bd6c495fe0125f20621d153965539efa684b98c26e23f0e939d91ffddc8f",
+          "bytes": 2945
+        },
+        {
+          "path": "README.md",
+          "sha256": "27444aeb102e65fda93a303b483f3eeb51faab64bfc62bf7cd8300fc5da4712a",
+          "bytes": 62975
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "0b92515bb2334c0e65a064f584f4e2a2759f7c62d8f336054793e1c9a72929bd",
+          "bytes": 3515
+        },
+        {
+          "path": "skills/invest/SKILL.md",
+          "sha256": "a4d8c9c8a2fa71ec17215d1a765c161961367299e610d2d4d3c7afc5f4c53d6a",
+          "bytes": 11506
+        },
+        {
+          "path": "skills/invest-allocation/SKILL.md",
+          "sha256": "e94ae3265568de4901689367acd995d455536e842c40756d8cd9c09f3dc56b71",
+          "bytes": 9318
+        },
+        {
+          "path": "skills/invest-analyst/SKILL.md",
+          "sha256": "cc85da53564ec85959fa72a88edceeb5b4b5bb8298095d9055ee20b8b2af0c5d",
+          "bytes": 4073
+        },
+        {
+          "path": "skills/invest-asset/SKILL.md",
+          "sha256": "192dc40b5e864a8b6b63ff7ad019abb3873f03e5d1fa6eb6bcb7031b6150ffe2",
+          "bytes": 3155
+        },
+        {
+          "path": "skills/invest-cli/SKILL.md",
+          "sha256": "d282a28afd2b18b7eae9148547f8eedbe97a064e8a47e4ec87309a34b2ea3c5d",
+          "bytes": 25332
+        },
+        {
+          "path": "skills/invest-discuss/SKILL.md",
+          "sha256": "f74f05eccd5d64835117a45f6768402f3b40939bb1072c41a161679abe4266de",
+          "bytes": 3081
+        },
+        {
+          "path": "skills/invest-enterprise/SKILL.md",
+          "sha256": "58972556b2c8dece07e027eb9a97ebe836ac3af1341acde0381a7894d0320665",
+          "bytes": 2152
+        },
+        {
+          "path": "skills/invest-fund/SKILL.md",
+          "sha256": "47b5b499cfa0f9fb7eb6697a71a1f47529e40c8ae42c953312b2d08bc1d70633",
+          "bytes": 6440
+        },
+        {
+          "path": "skills/invest-macro/SKILL.md",
+          "sha256": "cdf3ea367935a5eac6c2f58ae1ffd9dd5945514d211994516c0faa151b1f0c34",
+          "bytes": 6273
+        },
+        {
+          "path": "skills/invest-pool/SKILL.md",
+          "sha256": "3b85c7e68dfc13ff42b413cdb90bfbbc7442d8481e3032d2ce6addf3c14536ff",
+          "bytes": 9235
+        },
+        {
+          "path": "skills/invest-risk/SKILL.md",
+          "sha256": "d773cbf743b82257e272f06d365b0c2cbe129aa4e355ae2e92f4dd6d910943df",
+          "bytes": 10233
+        },
+        {
+          "path": "skills/invest-stock/SKILL.md",
+          "sha256": "d5ed8536b5b9960c7e976616b459a3637a7ccc3ba052fd56e3eda911a95d10fa",
+          "bytes": 6895
+        },
+        {
+          "path": "skills/mx-data/SKILL.md",
+          "sha256": "9c1cf6758f932c1d38030f97941f5537326ae0e55d8e85512fa9d816d7181deb",
+          "bytes": 2203
+        },
+        {
+          "path": "skills/mx-templates/SKILL.md",
+          "sha256": "1491fa5f0872ec6a74bb74b4116ded9f8fe2ef2457d7981fb5b24511b7b892fa",
+          "bytes": 1963
+        }
+      ]
+    },
+    {
+      "id": "InvestSkill",
+      "repository": "yennanliu/InvestSkill",
+      "commit": "cba40eebdfcca95f0ccbde7afadd96014dfe685d",
+      "license": "MIT",
+      "source_url": "https://github.com/yennanliu/InvestSkill/tree/cba40eebdfcca95f0ccbde7afadd96014dfe685d",
+      "submodule_path": "external/investment/InvestSkill",
+      "snapshot_scope": "selected reference documents; full source is a pinned submodule",
+      "upstream_catalog_file_count": 96,
+      "snapshot_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "6e0c9ccbaaa48f3fcc5cc54628f24b561aee0f6876f3eb4df68a546314e43eb1",
+          "bytes": 1067
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/10k-digest/SKILL.md",
+          "sha256": "15cde94634ffc9c70155e74ee11bb4e26a145ed17dbe3bc386bfeefb9bf189f4",
+          "bytes": 18211
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/bear-case/SKILL.md",
+          "sha256": "d3c029c1ca5b1ca86e8ad2b3dd3fd4e1206c8c6e0ed39fe94879a46dcfb244e9",
+          "bytes": 17004
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/catalyst-calendar/SKILL.md",
+          "sha256": "dc15361b015ef26cca0e7a51dfcbb0053ba7e83d22f9675368b867126d237dd1",
+          "bytes": 20868
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/chart-master/SKILL.md",
+          "sha256": "3a83ca4704da73b452dc1ba09eb3b6e52631fc32354c8361749b13fcd78c00f3",
+          "bytes": 25482
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/compare/SKILL.md",
+          "sha256": "56a8017b457cb60edcaf8d50bd2c91d7a6bc9fbb3dbf4f4cc295dfc86191fe94",
+          "bytes": 27594
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/competitor-analysis/SKILL.md",
+          "sha256": "475f1b921b18804fe42620338a355f8e6d784eafbe78841c8c75fe8b12704094",
+          "bytes": 29108
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/credit-check/SKILL.md",
+          "sha256": "6fe1d1c98d1d248eaa09df113ca50d8d65c4967ac5903706dd6079ef2f2eca7d",
+          "bytes": 29620
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/dcf-valuation/SKILL.md",
+          "sha256": "9dc33cc6078ecfb35d0d8fdf6d7ef5bf6a390df1148aa6a78ca42c6cbe6b9dd7",
+          "bytes": 5406
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/dividend-analysis/SKILL.md",
+          "sha256": "d0fa8faa304e5d04bbd6992216780117441e7463a0a3f26049ecca4f151eb6fe",
+          "bytes": 33675
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/earnings-call-analysis/SKILL.md",
+          "sha256": "dbedcabefaa5f889fa6a82f33e62282936beb4544a1c6b909be13d351f2a5294",
+          "bytes": 18213
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/earnings-preview/SKILL.md",
+          "sha256": "bf9092c247935b1537829a3727768acd24ace02eca7b8b7649fae7a88d6b0a73",
+          "bytes": 26593
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/economics-analysis/SKILL.md",
+          "sha256": "f3d958c71db9bbe38099e761483cd221f24a6697e915daa10cabf0ec4bad79c8",
+          "bytes": 21075
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/etf-analysis/SKILL.md",
+          "sha256": "07ae506844d8c729790dfabe738aebcc4376d753957619858f9af70a876bc762",
+          "bytes": 26888
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/fact-check/SKILL.md",
+          "sha256": "299afc355517ac772f6ce73d0941511fdd7dde8ef1cc11a60287d168cac51a88",
+          "bytes": 30426
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/financial-report-analyst/SKILL.md",
+          "sha256": "c6055a2f048ca07e75132acd91a6c0e2295a4db3b50871b2e80734a8dcc76335",
+          "bytes": 32736
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/forensic-accounting/SKILL.md",
+          "sha256": "41a4f8f974d15c3dd48d0f315df44b935d5e37b872dc9158ed8f63386184e07a",
+          "bytes": 32993
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/full-report/SKILL.md",
+          "sha256": "37708acdd0af1cc56ba02020c9e753592d299e447aff71d07c4c1f413719c48f",
+          "bytes": 21316
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/fundamental-analysis/SKILL.md",
+          "sha256": "d77a225d0f13fda4a995daa2e8b5d3c27877e9097074cca26af65198db0d0bd6",
+          "bytes": 4817
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/industry-map/SKILL.md",
+          "sha256": "bd20fd22fe9410b8a9dce950a5e58c7b576138f25eded4ae18cc6f4c22625049",
+          "bytes": 21488
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/insider-trading/SKILL.md",
+          "sha256": "d7edd66a181adae00e3676d79f3b12b906762a260a97879bc4d9182c53e33527",
+          "bytes": 20873
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/institutional-ownership/SKILL.md",
+          "sha256": "cb63a1d54d5c86530060e0f05e3d9bd6e36e7dcbac77876abb033f078418e822",
+          "bytes": 24648
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/learning-coach/SKILL.md",
+          "sha256": "65649859caa762b33cb96f63f7d223a90797bf81e3804fd80bf050fe6e175242",
+          "bytes": 27358
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/options-analysis/SKILL.md",
+          "sha256": "edce1d26e7b23b7e0c1b3230fd04f29f21af65e00cd83cdfc96cfac53aba910f",
+          "bytes": 29799
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/portfolio-review/SKILL.md",
+          "sha256": "d3253ce7bbf3ed0a55a343264092ff9b05cd93a15975626e9b1d827a888eb2ab",
+          "bytes": 24026
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/position-ladder/SKILL.md",
+          "sha256": "e973c1218456e3a56f7eca92e0ab074c58f4c53e71e323668d612c2dc4b548e5",
+          "bytes": 30833
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/report-generator/SKILL.md",
+          "sha256": "dc14d06f94c123e1fedd74b4a016483344fa0b03efd613928ed0209c8f99f99e",
+          "bytes": 34054
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/research-bundle/SKILL.md",
+          "sha256": "e3a548e91b2ece5e37536b4733c6bda195a6d430130bb1a1f4759435b6335d43",
+          "bytes": 6244
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/result-validator/SKILL.md",
+          "sha256": "d82daf746875450143f017c991929582b10d0edeb4b956ee9af68f6a3f95cf49",
+          "bytes": 12452
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/risk-stress-test/SKILL.md",
+          "sha256": "da7aa6e06f4af21098e595b7822737a2db961e58dbee09309ed73dd1d177418a",
+          "bytes": 23765
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/sector-analysis/SKILL.md",
+          "sha256": "3d7d1a94dde5715fb46630c067610012fb83c60d46a4a9f3305e70ae65dd3558",
+          "bytes": 29074
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/short-interest/SKILL.md",
+          "sha256": "b30621b7ba8891540caafa913142db592ad20bc2e49fe05a9b93f9745d9d3b29",
+          "bytes": 23179
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/stock-eval/SKILL.md",
+          "sha256": "00853f2e39ce734a21f2940953545127cc8039c3f07f0f29b8d43f3d4cff86f7",
+          "bytes": 40297
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/stock-screener/SKILL.md",
+          "sha256": "961d3b384737d39edb6713736fa9961e24ce7cf1b9b2533ec2e2bfa5860b759e",
+          "bytes": 14776
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/stock-valuation/SKILL.md",
+          "sha256": "268048ab821b737a59ca4d545fc102d23c69ee29f746700d732bbe0cb7c86f4b",
+          "bytes": 34843
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/tax-lens/SKILL.md",
+          "sha256": "26fee4325e8b31577592ec4dd2494c425cb1aee6e28ce5ab0e937bcb02e551e6",
+          "bytes": 33591
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/technical-analysis/SKILL.md",
+          "sha256": "11e921e3b2673f4c03a9d4319859d3eb903a6d3c9d65afd060ee94c4327b4ae0",
+          "bytes": 36176
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/thesis-tracker/SKILL.md",
+          "sha256": "def386bbb6ecc5373f48e54005660d47e17972dbf8b098cbee3096d739d98602",
+          "bytes": 23837
+        },
+        {
+          "path": "plugins/us-stock-analysis/skills/trade-postmortem/SKILL.md",
+          "sha256": "5ce0ed94e5d8a60bb16b13449fba3fa7d8478653cb1adfbca6c0546fd0859b8b",
+          "bytes": 33560
+        },
+        {
+          "path": "README.md",
+          "sha256": "245da4bcbb209da594639f5cdc7615999538ce179e4e94b88c1b583ba92f8dd6",
+          "bytes": 20367
+        },
+        {
+          "path": "site/content/CHOOSE-A-SKILL.md",
+          "sha256": "4e1c0dc881adf4b11f38a00c82042730e184f0aa76ba130cdd8aa0eaac548155",
+          "bytes": 8933
+        }
+      ]
+    },
+    {
+      "id": "claude-trading-skills",
+      "repository": "tradermonty/claude-trading-skills",
+      "commit": "c9b84196a44a56a553293114fdae1f30bdd08c58",
+      "license": "MIT",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/tree/c9b84196a44a56a553293114fdae1f30bdd08c58",
+      "submodule_path": "external/investment/claude-trading-skills",
+      "snapshot_scope": "selected reference documents; full source is a pinned submodule",
+      "upstream_catalog_file_count": 82,
+      "snapshot_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "7ecda97a735dabfc1f7b9681d4275440ac458e1cdccedf0a5dc7250dc6efbfab",
+          "bytes": 1069
+        },
+        {
+          "path": "README.md",
+          "sha256": "8a256cee2686091a3de4f90f0aeab27edc89335784ba693927079aa40fa1e96c",
+          "bytes": 47414
+        },
+        {
+          "path": "skills/backtest-expert/SKILL.md",
+          "sha256": "6f186f560b1a3c29c19990f4014e0921694ed529f1a652484b94945484259286",
+          "bytes": 10522
+        },
+        {
+          "path": "skills/data-quality-checker/SKILL.md",
+          "sha256": "7d63b1bfa0c7b840de1fd10744f881e911f1a43b1104ffbc1f1ae4837a4a6518",
+          "bytes": 5943
+        },
+        {
+          "path": "skills/drawdown-circuit-breaker/SKILL.md",
+          "sha256": "1246b4bb477785dfd999404fa293fb947e69789c29bc0b9ef5a6f423e5b77f83",
+          "bytes": 8594
+        },
+        {
+          "path": "skills/portfolio-manager/SKILL.md",
+          "sha256": "2140569d33ee86d09cbc2d342fd3e3418d78090e714a552814c1d9145e1b01eb",
+          "bytes": 26643
+        },
+        {
+          "path": "skills/position-sizer/SKILL.md",
+          "sha256": "ca757d574e5d29220adb4a99a138efadc92f59e9ec6a387a566c2c2d596631c8",
+          "bytes": 7479
+        },
+        {
+          "path": "skills/scenario-analyzer/SKILL.md",
+          "sha256": "9f304d378761a85d44ebf6b6c4e3917f77cdeec1068a95f56ceabedfddfda8d3",
+          "bytes": 10632
+        },
+        {
+          "path": "skills/signal-postmortem/SKILL.md",
+          "sha256": "689b672206df4249d3d9bb90cd20968d3b942fd48e6635a43c4e4eff1fd198d0",
+          "bytes": 6757
+        },
+        {
+          "path": "skills/trader-memory-core/SKILL.md",
+          "sha256": "f710e64305b413e2419db72a371cf791d20dec17a85a80c80e487d4e31c7ff1c",
+          "bytes": 17416
+        }
+      ]
+    },
+    {
+      "id": "financial-services",
+      "repository": "anthropics/financial-services",
+      "commit": "60565064557ca77b12f62aa7877f365d111c129d",
+      "license": "Apache-2.0",
+      "source_url": "https://github.com/anthropics/financial-services/tree/60565064557ca77b12f62aa7877f365d111c129d",
+      "submodule_path": "external/investment/financial-services",
+      "snapshot_scope": "selected reference documents; full source is a pinned submodule",
+      "upstream_catalog_file_count": 30,
+      "snapshot_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
+          "bytes": 11359
+        },
+        {
+          "path": "plugins/agent-plugins/meeting-prep-agent/skills/client-report/SKILL.md",
+          "sha256": "43d3a8107f5e8e19caa7c984d6d7b93aa0128ccc635b1444ebcca24f07d30201",
+          "bytes": 3301
+        },
+        {
+          "path": "plugins/agent-plugins/meeting-prep-agent/skills/client-review/SKILL.md",
+          "sha256": "5de84b03f01b77c68dd66626d9bafa6d9366166dc4984759986381c63acdcc1a",
+          "bytes": 3189
+        },
+        {
+          "path": "plugins/agent-plugins/meeting-prep-agent/skills/investment-proposal/SKILL.md",
+          "sha256": "4849d74526ad32d495fe72c62785a8d60109d1615972f79621600f7dad7b74a2",
+          "bytes": 3585
+        },
+        {
+          "path": "plugins/agent-plugins/meeting-prep-agent/skills/pptx-author/SKILL.md",
+          "sha256": "b3304ac6675f3777ec834b9d13e65b07dfadedd20c1a20d3329f5a91a239fc66",
+          "bytes": 1826
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/catalyst-calendar/SKILL.md",
+          "sha256": "2f5389f870dfbd16ff5ffe6b470b87dcd819a50664464a0f4bad27ddf6a1853a",
+          "bytes": 3112
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+          "sha256": "e46daa85cdb3d12d819fa22a0f93c1a8564b37ac651fcbf00220304c1cca6e74",
+          "bytes": 8685
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+          "sha256": "a49be9046e342e93a52ae9e1106f36309bbbf84a5c837b86552f8d1035533405",
+          "bytes": 2758
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md",
+          "sha256": "8dfdbf6e2212b20244df7b0f93125cd88ce025befbc804f5f53548b8950bf9eb",
+          "bytes": 3856
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/SKILL.md",
+          "sha256": "aa6e66ea3ab8f26947652c29dd8322ab1ffdcd63845f2a0262c84480ed695f4c",
+          "bytes": 29773
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md",
+          "sha256": "f98ba668fd6d7066c574fbab5598791dd0bb5dc5be7332d06ee327f9d4dbf658",
+          "bytes": 3355
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/morning-note/SKILL.md",
+          "sha256": "dbaecc0b373ee6a15cbfde3c5aa8dd97342c7d4eea859be4bb24c7f5c536b650",
+          "bytes": 3038
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md",
+          "sha256": "9e1e6761181c24e336fd129c148fedb0c77aa72449982909129584f60758dc1d",
+          "bytes": 3459
+        },
+        {
+          "path": "plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+          "sha256": "fc5b9b98c7c96dc91ccc219cb37daa5a9d1a5b15d2418450a632537fe498cccb",
+          "bytes": 2737
+        },
+        {
+          "path": "plugins/vertical-plugins/financial-analysis/skills/dcf-model/SKILL.md",
+          "sha256": "5173c2577b77e10e80f2ef2c5bf5387804122b911ab513a6a1d359f9e4d8d942",
+          "bytes": 49631
+        },
+        {
+          "path": "README.md",
+          "sha256": "0a022c72e8fceb9f3ae26506dd17fb3a5a4a893b02c0ddb6cb55626b606ca096",
+          "bytes": 15895
+        }
+      ]
+    },
+    {
+      "id": "PyPortfolioOpt",
+      "repository": "PyPortfolio/PyPortfolioOpt",
+      "commit": "a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+      "license": "MIT",
+      "source_url": "https://github.com/PyPortfolio/PyPortfolioOpt/tree/a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+      "submodule_path": "external/investment/PyPortfolioOpt",
+      "snapshot_scope": "selected reference documents; full source is a pinned submodule",
+      "upstream_catalog_file_count": 38,
+      "snapshot_files": [
+        {
+          "path": "docs/ExpectedReturns.rst",
+          "sha256": "db7cf0697db2186f923f78f6204f48b56270980c13ea6d60c9a38b66afaf00b7",
+          "bytes": 2473
+        },
+        {
+          "path": "docs/OtherOptimizers.rst",
+          "sha256": "df074cfa0650fd356bf95c4fc6863a1165d2ac9a293f24bdd4879801dcfb410a",
+          "bytes": 4547
+        },
+        {
+          "path": "docs/RiskModels.rst",
+          "sha256": "ed66bfc0f2b7238b29f84e67510263cfe58458fba5f7c1416336c5ec7ae715c6",
+          "bytes": 7898
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "00dfdf1b57237752512a482ea065fa607b03274b3eb153685ac7419622b73382",
+          "bytes": 1078
+        },
+        {
+          "path": "README.md",
+          "sha256": "b699a1e640e59d4a24c0b0f043e3c7acb3f9dccbac6048a60c46ec87f007c403",
+          "bytes": 20043
+        }
+      ]
+    }
+  ]
+}

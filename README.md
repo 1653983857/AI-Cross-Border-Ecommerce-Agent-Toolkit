@@ -254,3 +254,10 @@ AI-Cross-Border-Ecommerce-Agent-Toolkit/
 ## 📄 License
 
 [MIT](./LICENSE)
+
+
+## 基金投资决策技能
+
+新增独立统一入口 [`investment-decision`](skills/investment-decision/SKILL.md)，覆盖国内与海外基金研究、风险预算和含费用的买卖金额计算。五个上游项目以固定版本子模块保留，安装包内含89份离线参考；不改变原电商模块。使用方法、许可与验证边界见 [使用说明](docs/investment-decision.md) 和 [验证记录](skills/investment-decision/VERIFICATION.md)。
+
+完整取得上游源代码：`git submodule update --init --recursive external/investment`。仅使用统一技能时不必下载所有上游代码。第三方原文保留各自许可，尤其 taxue-invest 不适用主仓库的 MIT 许可。
