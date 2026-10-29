@@ -1,0 +1,23 @@
+{
+  "note": "Fill with actual user-confirmed values; null is deliberately invalid. Do not put real holdings in this repository.",
+  "as_of": null,
+  "profile": {
+    "base_currency": null,
+    "cash_available": null,
+    "emergency_reserve": null,
+    "near_term_reserve": null,
+    "horizon_years": null,
+    "max_stress_loss": null,
+    "max_annual_volatility": null,
+    "max_single_fund_weight": null,
+    "max_turnover": null,
+    "cash_annual_return": null,
+    "min_trade_amount": null,
+    "allowed_markets": null,
+    "max_history_lag_days": null,
+    "max_quote_lag_days": null
+  },
+  "funds": [],
+  "history": {},
+  "stress_scenarios": []
+}
